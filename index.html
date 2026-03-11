@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotify Clone</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Circular+Std:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<div class="navbar">
+  <img class="logo inve" src="assests/svgfiles/logo.svg" alt="Spotify">
+
+  <div class="searchbar">
+    <button class="icon1" aria-label="Home"></button>
+    <button class="icon2" aria-label="Search"></button>
+    <input class="textinput" type="text" placeholder="What do you want to listen to?">
+    <button class="icon3" aria-label="Browse"></button>
+  </div>
+
+  <div class="profile">
+    <button class="icon4" aria-label="Notifications"></button>
+    <button class="icon5" aria-label="Style"></button>
+    <button class="icon6" aria-label="Profile">A</button>
+  </div>
+</div>
+
+
+<!-- MAIN CONTAINER -->
+<div class="container">
+
+  <!-- LEFT SIDEBAR -->
+  <div class="left bg-gray rounded">
+    <button class="icon7" aria-label="Library"></button>
+    <button class="icon8" aria-label="Add"></button>
+    <div class="liked-l">
+      <img class="img1" src="assests/img/liked.jpg" alt="Liked Songs">
+    </div>
+  </div>
+
+  <!-- RIGHT CONTENT -->
+  <div class="right bg-gray rounded">
+
+    <!-- FILTER BUTTONS -->
+    <div class="p-head">
+      <button class="filter-btn active-filter">All</button>
+      <button class="filter-btn">Music</button>
+      <button class="filter-btn">Podcast</button>
+    </div>
+
+    <!-- RECENTLY PLAYED -->
+    <div class="recent">
+
+      <div class="horizontal-card" data-index="0">
+        <img class="h-img" src="assests/img/liked.jpg" alt="Liked Songs">
+        <p>Liked Songs</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="1">
+        <img class="h-img" src="assests/img/2nd.jpg" alt="Anuv Jain Mix">
+        <p>Anuv Jain Mix</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="2">
+        <img class="h-img" src="assests/img/3rd.jpg" alt="Study Music Hindi">
+        <p>Study Music Hindi</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="3">
+        <img class="h-img" src="assests/img/4rth.jpg" alt="Bollywood Hits">
+        <p>Bollywood Hits</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="4">
+        <img class="h-img" src="assests/img/5th.jpg" alt="Motivation Songs">
+        <p>Motivation Songs</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="5">
+        <img class="h-img" src="assests/img/6th.jpg" alt="Mi Pahave Tu Disave">
+        <p>Mi Pahave Tu Disave</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="6">
+        <img class="h-img" src="assests/img/a7th.jpg" alt="Best Motivation Songs">
+        <p>Best Motivation Songs</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+      <div class="horizontal-card" data-index="7">
+        <img class="h-img" src="assests/img/a8th.jpg" alt="Late Night Vibes">
+        <p>Late Night Vibes</p>
+        <div class="play-recent">
+          <svg viewBox="0 0 24 24" fill="black" width="14" height="14"><polygon points="5,3 19,12 5,21"/></svg>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- MADE FOR YOU -->
+    <div class="spotifyPlaylist">
+      <div class="text">
+        <div>
+          <p>Made for</p>
+          <h3>Aary Jadhav</h3>
+        </div>
+        <button class="right1">Show All</button>
+      </div>
+
+      <div class="cardcontainer">
+        <div class="playlist" data-index="0">
+          <div class="play-button">
+              <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p1.jpg" alt="Playlist 1">
+          <p>Pritam, Vishal-Shekhar, Amit Tivedi and more</p>
+        </div>
+
+        <div class="playlist" data-index="1">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p2.jpg" alt="Playlist 2">
+          <p>Shashwat Sachdev, Anuv Jain and more</p>
+        </div>
+
+        <div class="playlist" data-index="2">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p3.jpg" alt="Playlist 3">
+          <p>Radhika Bhide, Mukesh Upadhyay and more</p>
+        </div>
+
+        <div class="playlist" data-index="3">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p4.jpg" alt="Playlist 4">
+          <p>AP Dhillon, Juss, Shubh and more</p>
+        </div>
+
+        <div class="playlist" data-index="4">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p5.jpg" alt="Playlist 5">
+          <p>Zeeshan Ali, Deep Amber and more</p>
+        </div>
+
+        <div class="playlist" data-index="5">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p6.jpg" alt="Playlist 6">
+          <p>Ashu shukla, anuv and more</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- HAPPY PLAYLIST -->
+    <div class="spotifyPlaylist">
+      <div class="text">
+        <div>
+          <p>Music that made you happy</p>
+          <h3>Happy</h3>
+        </div>
+        <button class="right1">Show All</button>
+      </div>
+
+      <div class="cardcontainer">
+        <div class="playlist" data-index="0">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p24.jpg" alt="Happy 1">
+          <p>Bright, romantic and peppy</p>
+        </div>
+
+        <div class="playlist" data-index="1">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p22.jpg" alt="Happy 2">
+          <p>Fresh earthy smell and birds</p>
+        </div>
+
+        <div class="playlist" data-index="2">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p23.jpg" alt="Happy 3">
+          <p>Feel good collection</p>
+        </div>
+
+        <div class="playlist" data-index="3">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p2-4.jpg" alt="Happy 4">
+          <p>Turn down the light</p>
+        </div>
+
+        <div class="playlist" data-index="4">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p25.jpg" alt="Happy 5">
+          <p>Start your Sangeet night</p>
+        </div>
+
+        <div class="playlist" data-index="5">
+          <div class="play-button">
+            <svg viewBox="0 0 24 24" fill="black" width="18" height="18"><polygon points="5,3 19,12 5,21"/></svg>
+          </div>
+          <img class="box" src="assests/img/p26.jpg" alt="Happy 6">
+          <p>90's Vibes</p>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="right-footer">
+        <div class="footer-links">
+          <a href="#">Legal</a>
+          <a href="#">Privacy Center</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Cookies</a>
+          <a href="#">About Ads</a>
+        </div>
+        <div class="footer-links">
+          <a href="#">Accessibility</a>
+          <a href="#">Support</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="copyright">© 2026 Spotify Clone</p>
+      </div>
+    </div>
+
+  </div><!-- end .right -->
+</div><!-- end .container -->
+
+
+<!-- PLAYER BAR -->
+<div class="playbar" id="playbar">
+
+  <!-- Song Info (left) -->
+  <div class="song-info">
+    <img class="now-playing-thumb" id="nowPlayingThumb" src="" alt="">
+    <div class="now-playing-text">
+      <p class="song-title" id="songTitle">No song playing</p>
+      <span class="song-time" id="songTime">0:00 / 0:00</span>
+    </div>
+  </div>
+
+  <!-- Controls (center) -->
+  <div class="playbar-center">
+    <div class="playbar-controls">
+      <!-- Shuffle -->
+      <button class="ctrl-btn" id="shuffleBtn" aria-label="Shuffle" title="Shuffle">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
+        </svg>
+      </button>
+
+      <!-- Previous -->
+      <button class="ctrl-btn" id="prevBtn" aria-label="Previous" title="Previous">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+        </svg>
+      </button>
+
+      <!-- Play/Pause -->
+      <button class="play-main" id="playBtn" aria-label="Play/Pause">
+        <svg id="playIcon" viewBox="0 0 24 24" fill="black" width="20" height="20">
+          <polygon points="5,3 19,12 5,21"/>
+        </svg>
+        <svg id="pauseIcon" viewBox="0 0 24 24" fill="black" width="20" height="20" style="display:none">
+          <rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>
+        </svg>
+      </button>
+
+      <!-- Next -->
+      <button class="ctrl-btn" id="nextBtn" aria-label="Next" title="Next">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+          <path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/>
+        </svg>
+      </button>
+
+      <!-- Repeat -->
+      <button class="ctrl-btn" id="repeatBtn" aria-label="Repeat" title="Repeat">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+      <input type="range" id="progressBar" class="progress-bar" value="0" min="0" max="100" step="0.1">
+    </div>
+  </div>
+
+  <!-- Volume (right) -->
+  <div class="volume">
+    <button class="volume-icon" id="muteBtn" aria-label="Mute"></button>
+    <input type="range" id="volumeSlider" min="0" max="100" value="80">
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
