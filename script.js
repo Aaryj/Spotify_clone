@@ -1,12 +1,7 @@
-/* =============================================
-   SPOTIFY CLONE — script.js  (fully fixed)
-   ============================================= */
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* ------------------------------------------
-     AUDIO ENGINE
-  ------------------------------------------ */
   const currentSong = new Audio();
 
   const songs = [
@@ -26,9 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let isMuted       = false;
   let lastVolume    = 0.8;   // remember volume before mute
 
-  /* ------------------------------------------
-     DOM REFERENCES
-  ------------------------------------------ */
+  
   const playbar        = document.getElementById("playbar");
   const playBtn        = document.getElementById("playBtn");
   const playIcon       = document.getElementById("playIcon");
@@ -47,9 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // All clickable cards (recent section)
   const cards = document.querySelectorAll(".horizontal-card");
 
-  /* ------------------------------------------
-     HELPERS
-  ------------------------------------------ */
+
 
   // Format seconds → "m:ss"
   function formatTime(sec) {
@@ -87,9 +78,6 @@ document.addEventListener("DOMContentLoaded", function () {
     return r;
   }
 
-  /* ------------------------------------------
-     PLAY MUSIC
-  ------------------------------------------ */
   function playMusic(index) {
     if (index < 0 || index >= songs.length) return;
 
@@ -125,9 +113,7 @@ document.addEventListener("DOMContentLoaded", function () {
     playbar.classList.add("active");
   }
 
-  /* ------------------------------------------
-     CARD CLICK EVENTS (recent section)
-  ------------------------------------------ */
+
   cards.forEach((card, index) => {
     card.addEventListener("click", () => {
       if (currentIndex === index && !currentSong.paused) {
@@ -140,9 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-/* ------------------------------------------
-     PLAY / PAUSE BUTTON
-  ------------------------------------------ */
+
   playBtn.addEventListener("click", () => {
     if (currentIndex === -1) {
       // Nothing loaded yet — start first song
@@ -159,9 +143,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ------------------------------------------
-     NEXT / PREV
-  ------------------------------------------ */
+
   function playNext() {
     let next;
     if (isShuffled) {
@@ -185,9 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
   nextBtn.addEventListener("click", playNext);
   prevBtn.addEventListener("click", playPrev);
 
-  /* ------------------------------------------
-     SONG ENDED
-  ------------------------------------------ */
+
   currentSong.addEventListener("ended", () => {
     if (isRepeat) {
       currentSong.currentTime = 0;
@@ -197,25 +177,19 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ------------------------------------------
-     SHUFFLE TOGGLE
-  ------------------------------------------ */
+
   shuffleBtn.addEventListener("click", () => {
     isShuffled = !isShuffled;
     shuffleBtn.classList.toggle("btn-active", isShuffled);
   });
 
-  /* ------------------------------------------
-     REPEAT TOGGLE
-  ------------------------------------------ */
+ 
   repeatBtn.addEventListener("click", () => {
     isRepeat = !isRepeat;
     repeatBtn.classList.toggle("btn-active", isRepeat);
   });
 
-  /* ------------------------------------------
-     PROGRESS BAR — update as song plays
-  ------------------------------------------ */
+
   currentSong.addEventListener("timeupdate", () => {
     if (!currentSong.duration) return;
 
@@ -229,17 +203,13 @@ document.addEventListener("DOMContentLoaded", function () {
     songTime.innerText = `${formatTime(currentSong.currentTime)} / ${formatTime(currentSong.duration)}`;
   });
 
-  /* ------------------------------------------
-     PROGRESS BAR — seek on drag
-  ------------------------------------------ */
+
   progressBar.addEventListener("input", () => {
     if (!currentSong.duration) return;
     currentSong.currentTime = (progressBar.value / 100) * currentSong.duration;
   });
 
-  /* ------------------------------------------
-     VOLUME SLIDER
-  ------------------------------------------ */
+
   volumeSlider.value = 80;
   currentSong.volume = 0.8;
 
@@ -255,9 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `linear-gradient(to right, #1db954 ${volumeSlider.value}%, #4d4d4d ${volumeSlider.value}%)`;
   });
 
-  /* ------------------------------------------
-     MUTE BUTTON
-  ------------------------------------------ */
+ 
   muteBtn.addEventListener("click", () => {
     isMuted = !isMuted;
 
@@ -277,9 +245,7 @@ document.addEventListener("DOMContentLoaded", function () {
       `linear-gradient(to right, #1db954 ${v}%, #4d4d4d ${v}%)`;
   });
 
-  /* ------------------------------------------
-     FILTER BUTTONS (UI only)
-  ------------------------------------------ */
+
   document.querySelectorAll(".filter-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
       document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active-filter"));
@@ -287,9 +253,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  /* ------------------------------------------
-     KEYBOARD SHORTCUTS
-  ------------------------------------------ */
+
   document.addEventListener("keydown", (e) => {
     // Ignore if typing in input
     if (e.target.tagName === "INPUT") return;
@@ -324,9 +288,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /* ------------------------------------------
-     INITIAL slider fill colours
-  ------------------------------------------ */
+
   progressBar.style.background = "linear-gradient(to right, #1db954 0%, #4d4d4d 0%)";
   volumeSlider.style.background = "linear-gradient(to right, #1db954 80%, #4d4d4d 80%)";
 
