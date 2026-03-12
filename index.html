@@ -46,7 +46,7 @@
   <!-- RIGHT CONTENT -->
   <div class="right bg-gray rounded">
 
-    <!-- FILTER BUTTONS -->
+
     <div class="p-head">
       <button class="filter-btn active-filter">All</button>
       <button class="filter-btn">Music</button>
@@ -263,14 +263,13 @@
       </div>
     </div>
 
-  </div><!-- end .right -->
-</div><!-- end .container -->
+  </div>
+</div>
 
 
 <!-- PLAYER BAR -->
 <div class="playbar" id="playbar">
 
-  <!-- Song Info (left) -->
   <div class="song-info">
     <img class="now-playing-thumb" id="nowPlayingThumb" src="" alt="">
     <div class="now-playing-text">
@@ -279,24 +278,23 @@
     </div>
   </div>
 
-  <!-- Controls (center) -->
+  
   <div class="playbar-center">
     <div class="playbar-controls">
-      <!-- Shuffle -->
+      
       <button class="ctrl-btn" id="shuffleBtn" aria-label="Shuffle" title="Shuffle">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
           <path d="M10.59 9.17L5.41 4 4 5.41l5.17 5.17 1.42-1.41zM14.5 4l2.04 2.04L4 18.59 5.41 20 17.96 7.46 20 9.5V4h-5.5zm.33 9.41l-1.41 1.41 3.13 3.13L14.5 20H20v-5.5l-2.04 2.04-3.13-3.13z"/>
         </svg>
       </button>
-
-      <!-- Previous -->
+      
       <button class="ctrl-btn" id="prevBtn" aria-label="Previous" title="Previous">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
         </svg>
       </button>
 
-      <!-- Play/Pause -->
+      
       <button class="play-main" id="playBtn" aria-label="Play/Pause">
         <svg id="playIcon" viewBox="0 0 24 24" fill="black" width="20" height="20">
           <polygon points="5,3 19,12 5,21"/>
@@ -306,14 +304,13 @@
         </svg>
       </button>
 
-      <!-- Next -->
+      
       <button class="ctrl-btn" id="nextBtn" aria-label="Next" title="Next">
         <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
           <path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/>
         </svg>
       </button>
 
-      <!-- Repeat -->
       <button class="ctrl-btn" id="repeatBtn" aria-label="Repeat" title="Repeat">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
           <path d="M7 7h10v3l4-4-4-4v3H5v6h2V7zm10 10H7v-3l-4 4 4 4v-3h12v-6h-2v4z"/>
@@ -321,13 +318,11 @@
       </button>
     </div>
 
-    <!-- Progress Bar -->
     <div class="progress-container">
       <input type="range" id="progressBar" class="progress-bar" value="0" min="0" max="100" step="0.1">
     </div>
   </div>
 
-  <!-- Volume (right) -->
   <div class="volume">
     <button class="volume-icon" id="muteBtn" aria-label="Mute"></button>
     <input type="range" id="volumeSlider" min="0" max="100" value="80">
